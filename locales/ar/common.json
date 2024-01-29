@@ -4,6 +4,8 @@
     "dashboardPage": "dashboard protect page",
     "sign-out": "sing out",
     "sign-in": "sing in",
-    "sign-up": "register"
+    "sign-up": "register",
+    "CreateStore": "انشاء متجر جديد",
+    "AddNewStore": "قم بانشاء متجر لادراة واضافة المنتجات"
   }
 }

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { useLocale } from "next-intl";
+import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import useTextDirection from "@/hooks/useTextDirection";
 import { ClerkProvider } from "@clerk/nextjs";
+import ModalProvider from "@/providers/model-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +17,18 @@ type Props = {
 };
 export default function RootLayout({ children }: Props) {
   const locale = useLocale();
+  const messages = useMessages();
   const direction = useTextDirection(locale);
   return (
-    <ClerkProvider>
-      <html lang={locale} dir={direction}>
-        <body className={inter.className}>{children}</body>
-      </html>
-    </ClerkProvider>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <ClerkProvider>
+        <html lang={locale} dir={direction}>
+          <body className={inter.className}>
+            <ModalProvider />
+            {children}
+          </body>
+        </html>
+      </ClerkProvider>
+    </NextIntlClientProvider>
   );
 }

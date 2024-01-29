@@ -1,14 +1,20 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+import { Modal } from "@/components/ui/modal";
+import { useStoreModal } from "@/hooks/useStoreModal";
 
-export default function Home() {
-  const t = useTranslations("Index");
-  return (
-    <div>
-      Admin Dashboard
-      <div>
-        <Button>{t("title")}</Button>
-      </div>
-    </div>
-  );
+import { UserButton } from "@clerk/nextjs";
+import { useTranslations } from "next-intl";
+import { useEffect } from "react";
+
+export default function SetupPage() {
+  const onOpen = useStoreModal((state) => state.onOpen);
+  const isOpen = useStoreModal((state) => state.isOpen);
+
+  useEffect(() => {
+    if (!isOpen) {
+      onOpen();
+    }
+  }, [isOpen, onOpen]);
+  return <div className="p-4">Root</div>;
 }

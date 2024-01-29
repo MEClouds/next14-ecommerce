@@ -2,7 +2,7 @@ import { authMiddleware } from "@clerk/nextjs";
 import createMiddleware from "next-intl/middleware";
 
 const intlMiddleware = createMiddleware({
-  locales: ["ar", "en"],
+  locales: ["en", "ar"],
   defaultLocale: "en",
 });
 
@@ -12,15 +12,10 @@ export default authMiddleware({
   },
 
   // Ensure that locale-specific sign in pages are public
-  publicRoutes: ["/", "/:locale", "/:locale/sign-in", "/:locale/sign-up"],
+  publicRoutes: ["/:locale", "/:locale/sign-in"],
 });
 
 export const config = {
   // Match only internationalized pathnames
-
-  matcher: [
-    "/",
-    "/(ar|en|es)/:path*",
-    "/((?!api|_next/static|_next/image|favicon.ico|apple-touch-icon.png|favicon.svg|images/books|icons|manifest).*)",
-  ],
+  matcher: ["/", "/(ar|en)/:path*"],
 };
