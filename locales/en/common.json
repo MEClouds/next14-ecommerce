@@ -6,6 +6,13 @@
     "sign-in": "sing in",
     "sign-up": "register",
     "CreateStore": "Create Store",
-    "AddNewStore": "Add a New Store to Dashboard"
+    "AddNewStore": "Add a New Store to Dashboard",
+    "StoreName": "Store Name",
+    "E-commerce": "E-commerce",
+    "cancel": "cancel",
+    "continue": "continue",
+    "StoreNameError": "Name must be at least 1 character long",
+    "StoreCreated": "Store created",
+    "SomethingWrong": "something went wrong."
   }
 }
