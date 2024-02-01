@@ -11,6 +11,8 @@
     "E-commerce": "المتجر الالكتروني",
     "cancel": "إلغاء",
     "continue": "إستمرار",
-    "StoreNameError": "الاسم يجب أن يكون على الأقل حرف واحد."
+    "StoreNameError": "الاسم يجب أن يكون على الأقل حرف واحد.",
+    "StoreCreated": "تم إنشاء المتجر ",
+    "SomethingWrong": "حدث خطاء ما"
   }
 }

@@ -5,6 +5,7 @@ import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import useTextDirection from "@/hooks/useTextDirection";
 import { ClerkProvider } from "@clerk/nextjs";
 import ModalProvider from "@/providers/model-provider";
+import { ToasterProvider } from "@/providers/toast-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,15 +21,16 @@ export default function RootLayout({ children }: Props) {
   const messages = useMessages();
   const direction = useTextDirection(locale);
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <ClerkProvider>
+    <ClerkProvider>
+      <NextIntlClientProvider locale={locale} messages={messages}>
         <html lang={locale} dir={direction}>
           <body className={inter.className}>
+            <ToasterProvider />
             <ModalProvider />
             {children}
           </body>
         </html>
-      </ClerkProvider>
-    </NextIntlClientProvider>
+      </NextIntlClientProvider>
+    </ClerkProvider>
   );
 }

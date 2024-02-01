@@ -12,10 +12,10 @@ export default authMiddleware({
   },
 
   // Ensure that locale-specific sign in pages are public
-  publicRoutes: ["/:locale", "/:locale/sign-in"],
+  publicRoutes: ["/:locale", "/:locale/sign-in", "/api"],
 });
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/(ar|en)/:path*"],
+  matcher: ["/", "/(ar|en)/:path*", "/(api|trpc)(.*)"],
 };
