@@ -40,8 +40,9 @@ export const StoreModal = () => {
     try {
       setLoading(true);
       const response = await axios.post("/api/store", values);
-      console.log(response.data);
-      toast.success(t("StoreCreated"));
+      window.location.assign(`/${response.data.id}`);
+      //window.location assign this make refresh the page to ensure db ready
+      // toast.success(t("StoreCreated"));
     } catch (error) {
       toast.error(t("SomethingWrong"));
     } finally {
@@ -75,6 +76,7 @@ export const StoreModal = () => {
                 </FormItem>
               )}
             />
+            {/* TODO : Add field to select Store language */}
             <div className="pt-5 gap-2 flex items-center justify-end w-full">
               <Button
                 disabled={loading}

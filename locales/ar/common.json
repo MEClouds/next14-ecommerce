@@ -13,6 +13,12 @@
     "continue": "إستمرار",
     "StoreNameError": "الاسم يجب أن يكون على الأقل حرف واحد.",
     "StoreCreated": "تم إنشاء المتجر ",
-    "SomethingWrong": "حدث خطاء ما"
+    "SomethingWrong": "حدث خطاء ما",
+    "Settings": "الاعدادات",
+    "NoStoreFound": "لم يتم العثور على المتجر.",
+    "Create Store": "إنشاء متجر",
+    "StoreDashboard": "هذه هي لوحة التحكم للمتجر:",
+    "SearchStore": "بحث عن المتجر...",
+    "Stores": "المتاجر"
   }
 }
