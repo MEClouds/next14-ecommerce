@@ -19,6 +19,16 @@
     "Create Store": "إنشاء متجر",
     "StoreDashboard": "هذه هي لوحة التحكم للمتجر:",
     "SearchStore": "بحث عن المتجر...",
-    "Stores": "المتاجر"
+    "Stores": "المتاجر",
+    "settings": "الإعدادات",
+    "SettingsDesriptions": "إدارة تفضيلات المتجر",
+    "Name": "الاسم ",
+    "SaveChanges": "حفظ التغييرات",
+    "StoreUpdated": "تم تحديث المتجر",
+    "AreYouShure": "هل أنت متأكد ؟",
+    "CannotBeUndone": "لا يمكن التراجع عن هذا الإجراء.",
+    "StoreDeleteErorr": "تأكد من إزالة جميع المنتجات والفئات أولاً.",
+    "StoreDeleted": "تم حذف المتجر",
+    "Overfiew": "نظرة عامة"
   }
 }

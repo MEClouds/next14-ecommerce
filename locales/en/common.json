@@ -14,11 +14,21 @@
     "StoreNameError": "Name must be at least 1 character long",
     "StoreCreated": "Store created",
     "SomethingWrong": "something went wrong.",
-    "Settings": "settings",
+    "Settings": "Settings",
     "NoStoreFound": "No Store Found.",
     "Create Store": "Create Store",
     "StoreDashboard": "This is Dashboard for Store :",
     "SearchStore": "Search store ...",
-    "Stores": "Stores"
+    "Stores": "Stores",
+    "settings": "Settings",
+    "SettingsDesriptions": "Mange Store preferences",
+    "Name": "Name",
+    "SaveChanges": "Save changes",
+    "StoreUpdated": "Store Updated",
+    "AreYouShure": "Are you sure ?",
+    "CannotBeUndone": "This action cannot be undone.",
+    "StoreDeleteErorr": "Make sure you remove all products and categories first.",
+    "StoreDeleted": "Store deleted",
+    "Overfiew": "Overview"
   }
 }

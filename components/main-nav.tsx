@@ -14,9 +14,14 @@ export function MainNav({
   const t = useTranslations("Index");
   const routes = [
     {
-      href: `/${params.storeId}/settings`,
+      href: `/${params.storeid}`,
+      label: t("Overfiew"),
+      active: pathname === `/${params.storeid}`,
+    },
+    {
+      href: `/${params.storeid}/settings`,
       label: t("Settings"),
-      active: pathname === `/${params.storeId}/settings`,
+      active: pathname === `/${params.storeid}/settings`,
     },
   ];
   return (

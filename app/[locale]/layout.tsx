@@ -4,6 +4,7 @@ import "./globals.css";
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import useTextDirection from "@/hooks/useTextDirection";
 import { ClerkProvider } from "@clerk/nextjs";
+import { arSA, enUS } from "@clerk/localizations";
 import ModalProvider from "@/providers/model-provider";
 import { ToasterProvider } from "@/providers/toast-provider";
 
@@ -18,10 +19,11 @@ type Props = {
 };
 export default function RootLayout({ children }: Props) {
   const locale = useLocale();
+  const normalizeLocale = locale == "ar" ? arSA : enUS;
   const messages = useMessages();
   const direction = useTextDirection(locale);
   return (
-    <ClerkProvider>
+    <ClerkProvider localization={normalizeLocale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <html lang={locale} dir={direction}>
           <body className={inter.className}>

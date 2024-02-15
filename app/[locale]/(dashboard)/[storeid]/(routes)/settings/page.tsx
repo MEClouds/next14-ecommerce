@@ -1,14 +1,14 @@
-import Navbar from "@/components/navbar";
 import prismadb from "@/lib/prismadb";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+import { SettingsForm } from "./components/settings-form";
 
-interface DashboardProps {
-  children: React.ReactNode;
-  params: { storeid: string };
+interface SettingPageProps {
+  params: {
+    storeid: string;
+  };
 }
-
-export default async function Dashboard({ children, params }: DashboardProps) {
+const SettingsPage: React.FC<SettingPageProps> = async ({ params }) => {
   const { userId } = auth();
   if (!userId) {
     redirect("/sign-in");
@@ -26,9 +26,12 @@ export default async function Dashboard({ children, params }: DashboardProps) {
   }
 
   return (
-    <>
-      <Navbar />
-      {children}
-    </>
+    <div className=" flex-col ">
+      <div className="flex-1 space-y-3 p-6 pt-6">
+        <SettingsForm initialData={store} />
+      </div>
+    </div>
   );
-}
+};
+
+export default SettingsPage;

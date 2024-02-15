@@ -18,6 +18,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { Separator } from "../ui/separator";
 
 export const StoreModal = () => {
   const t = useTranslations("Index");
@@ -92,6 +93,7 @@ export const StoreModal = () => {
           </form>
         </Form>
       </div>
+      <Separator />
     </Modal>
   );
 };
