@@ -29,6 +29,7 @@ const SettingsPage: React.FC<SettingPageProps> = async ({ params }) => {
     <div className=" flex-col ">
       <div className="flex-1 space-y-3 p-6 pt-6">
         <SettingsForm initialData={store} />
+        <div className=" ps-3"></div>
       </div>
     </div>
   );

@@ -29,6 +29,7 @@
     "CannotBeUndone": "This action cannot be undone.",
     "StoreDeleteErorr": "Make sure you remove all products and categories first.",
     "StoreDeleted": "Store deleted",
-    "Overfiew": "Overview"
+    "Overfiew": "Overview",
+    "Copy": "API route copied tho the clipbord"
   }
 }

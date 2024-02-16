@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertModal } from "@/components/modals/alert-modal";
+import { ApiALert } from "@/components/ui/api-alert";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -12,6 +13,8 @@ import {
 } from "@/components/ui/form";
 import { Heading } from "@/components/ui/heading";
 import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
+import { useOrigin } from "@/hooks/use-origin";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Store } from "@prisma/client";
 import axios from "axios";
@@ -34,6 +37,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
   const [loading, setLoading] = useState(false);
   const params = useParams();
   const router = useRouter();
+  const origin = useOrigin();
   const formSchema = z.object({
     name: z.string().min(1, t("StoreNameError")),
   });
@@ -126,6 +130,12 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             {t("SaveChanges")}
           </Button>
         </form>
+        <Separator />
+        <ApiALert
+          title="NEXT_PUBLIC_API_URL"
+          description={`${origin}/api/${params.storeid}`}
+          variant="public"
+        />
       </Form>
     </>
   );
