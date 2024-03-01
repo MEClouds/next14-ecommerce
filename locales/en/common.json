@@ -30,6 +30,7 @@
     "StoreDeleteErorr": "Make sure you remove all products and categories first.",
     "StoreDeleted": "Store deleted",
     "Overfiew": "Overview",
-    "Copy": "API route copied tho the clipbord"
+    "Copy": "API route copied tho the clipbord",
+    "billboards": "Billboards"
   }
 }
