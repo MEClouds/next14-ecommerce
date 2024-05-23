@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Heading } from "@/components/ui/heading";
+import ImageUpload from "@/components/ui/image-upload";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { useOrigin } from "@/hooks/use-origin";
@@ -39,9 +40,19 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
   const router = useRouter();
   const origin = useOrigin();
   const formSchema = z.object({
-    name: z.string().min(1, t("StoreNameError")),
+    label: z.string().min(1, t("StoreNameError")),
+    imageUrl: z.string().min(1, t("StoreNameError")),
   });
 
+  const title = initialData ? t("EditBillboard") : t("billboards");
+  const description = initialData
+    ? t("EditBillboardDesc")
+    : t("AddBillboardsDesc");
+  const toastMessage = initialData
+    ? t("BillboardUpdated")
+    : t("BillboardCreated");
+
+  const action = initialData ? t("SaveChanges") : t("Create");
   type BillboardFormValues = z.infer<typeof formSchema>;
 
   const form = useForm<BillboardFormValues>({
@@ -56,11 +67,18 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
     console.log(data);
     try {
       setLoading(true);
-
-      await axios.patch(`/api/store/${params.storeid}`, data);
+      if (initialData) {
+        await axios.patch(
+          `/api/${params.storeid}/billboards/${params.billboardid}`,
+          data
+        );
+      } else {
+        await axios.post(`/api/${params.storeid}/billboards`, data);
+      }
 
       router.refresh();
-      toast.success(t("StoreUpdated"));
+      toast.success(t(toastMessage));
+      router.push(`/${params.storeid}/billboards`);
     } catch (error) {
       toast.error(t("SomethingWrong"));
     } finally {
@@ -71,12 +89,14 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/store/${params.storeid}`);
+      await axios.delete(
+        `/api/${params.storeid}/billboards/${params.billboardid}`
+      );
       router.refresh();
       router.push("/");
       toast.success(t("StoreDeleted"));
     } catch (error) {
-      toast.error(t("StoreDeleteErorr"));
+      toast.error(t("BillboardDeleteErorr"));
     } finally {
       setLoading(false);
     }
@@ -93,16 +113,18 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
         loading={loading}
       />
       <div className="flex items-center justify-between">
-        <Heading title={t("settings")} description={t("SettingsDesriptions")} />
-        <Button
-          disabled={loading}
-          className=""
-          variant={"destructive"}
-          size={"sm"}
-          onClick={() => setOpen(true)}
-        >
-          <Trash className="h-4 w-4 " />
-        </Button>
+        <Heading title={title} description={description} />
+        {initialData && (
+          <Button
+            disabled={loading}
+            className=""
+            variant={"destructive"}
+            size={"sm"}
+            onClick={() => setOpen(true)}
+          >
+            <Trash className="h-4 w-4 " />
+          </Button>
+        )}
       </div>
       {/* <Separator /> */}
       <Form {...form}>
@@ -110,17 +132,35 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-7 w-full"
         >
+          <FormField
+            control={form.control}
+            name="imageUrl"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t("BackgroundImage")}</FormLabel>
+                <FormControl>
+                  <ImageUpload
+                    disable={loading}
+                    value={field.value ? [field.value] : []}
+                    onChange={(url) => field.onChange(url)}
+                    onRemove={() => field.onChange("")}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <div className="grid grid-cols-3 gap7">
             <FormField
               control={form.control}
-              name="name"
+              name="label"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t("Name")}</FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder={t("StoreName")}
+                      placeholder={t("BillboardLabel")}
                       {...field}
                     />
                   </FormControl>
@@ -130,15 +170,10 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
             />
           </div>
           <Button disabled={loading} type="submit">
-            {t("SaveChanges")}
+            {action}
           </Button>
         </form>
         <Separator />
-        <ApiALert
-          title="NEXT_PUBLIC_API_URL"
-          description={`${origin}/api/${params.storeid}`}
-          variant="public"
-        />
       </Form>
     </>
   );

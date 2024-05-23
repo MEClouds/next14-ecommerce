@@ -7,6 +7,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { arSA, enUS } from "@clerk/localizations";
 import ModalProvider from "@/providers/model-provider";
 import { ToasterProvider } from "@/providers/toast-provider";
+import { isRtlLang } from "rtl-detect";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Props) {
   const normalizeLocale = locale == "ar" ? arSA : enUS;
   const messages = useMessages();
   const direction = useTextDirection(locale);
+  const dir = isRtlLang(locale) ? "rtl" : "ltr";
   return (
     <ClerkProvider localization={normalizeLocale}>
       <NextIntlClientProvider locale={locale} messages={messages}>

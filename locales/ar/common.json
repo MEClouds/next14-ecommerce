@@ -31,6 +31,19 @@
     "StoreDeleted": "تم حذف المتجر",
     "Overfiew": "نظرة عامة",
     "Copy": "تم النسخ",
-    "billboards": "لوحة اللإعلانات"
+    "billboards": "لوحة اللإعلانات",
+    "AddNew": "جديد",
+    "billboardsDesc": "إدارة اللوحات الإعلانية لمتجرك",
+    "EditBillboard": "تعديل لوحة الإعلانات",
+    "EditBillboardDesc": "تحرير لوحة إعلانية",
+    "AddBillboardsDesc": "إضافة لوحة إعلانية جديدة",
+    "BillboardUpdated": "تم تحديث لوحة الإعلانات.",
+    "BillboardCreated": "تم إنشاء لوحة الإعلانات.",
+    "Create": "إنشاء",
+    "BillboardLabel": "تسمية لوحة الإعلانات",
+    "Label": "ملصق",
+    "BackgroundImage": "الصورة الخلفية",
+    "AddImage": "إضافة صورة",
+    "BillboardDeleteErorr": "تأكد من إزالة جميع الفئات المستخدمة في لوحة الإعلانات هذه"
   }
 }

@@ -31,6 +31,19 @@
     "StoreDeleted": "Store deleted",
     "Overfiew": "Overview",
     "Copy": "API route copied tho the clipbord",
-    "billboards": "Billboards"
+    "billboards": "Billboards",
+    "AddNew": "Add New",
+    "billboardsDesc": "Mange billboards for your store",
+    "EditBillboard": "Edit Billboard",
+    "EditBillboardDesc": "Edit a Billboard",
+    "AddBillboardsDesc": "Add a new Billboard",
+    "BillboardCreated": "Billboard created.",
+    "BillboardUpdated": "Billboard updated.",
+    "Create": "create",
+    "BillboardLabel": "Billboard Label",
+    "Label": "Label",
+    "BackgroundImage": "Background image",
+    "AddImage": "Add Image",
+    "BillboardDeleteErorr": "Make sure you remove all categouries used in this billboard"
   }
 }
