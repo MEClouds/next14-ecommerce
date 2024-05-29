@@ -28,7 +28,7 @@ export default async function Dashboard({ children, params }: DashboardProps) {
   return (
     <>
       <Navbar />
-      {children}
+      <div className="mx-auto max-w-[1300px]">{children}</div>
     </>
   );
 }

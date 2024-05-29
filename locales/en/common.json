@@ -44,6 +44,13 @@
     "Label": "Label",
     "BackgroundImage": "Background image",
     "AddImage": "Add Image",
-    "BillboardDeleteErorr": "Make sure you remove all categouries used in this billboard"
+    "BillboardDeleteErorr": "Make sure you remove all categouries used in this billboard",
+    "Search": "Search",
+    "label": "label",
+    "Date": "Date",
+    "Previous": "Previous",
+    "Next": "Next",
+    "API": "API",
+    "APIDescription": "API calls for billboards"
   }
 }

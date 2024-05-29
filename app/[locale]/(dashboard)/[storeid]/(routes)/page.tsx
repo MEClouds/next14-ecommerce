@@ -12,7 +12,7 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
   });
   const t = await getTranslations("Index");
   return (
-    <div>
+    <div className="m-4">
       {t("StoreDashboard")}
       {store?.name}
     </div>
