@@ -28,6 +28,11 @@ export function MainNav({
       label: t("billboards"),
       active: pathname === `/${params.storeid}/billboards`,
     },
+    {
+      href: `/${params.storeid}/categories`,
+      label: t("categories"),
+      active: pathname === `/${params.storeid}/categories`,
+    },
   ];
   return (
     <nav className={cn("flex  items-center  gap-x-4 lg:gap-x-6", className)}>
