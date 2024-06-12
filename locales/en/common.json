@@ -59,6 +59,19 @@
     "EditcategoryDesc": "Edit category description",
     "AddCategoriesDesc": "add category description",
     "categoryUpdated": "category updated",
-    "categoryCreated": "category created"
+    "categoryCreated": "category created",
+    "Billboard": "Billboard",
+    "SelectBillboards": "Select a billboard",
+    "CategoryName": "Category name",
+    "CategoriesDesc": "Mange categories for your store"
+  },
+  "index": {
+    "CopyID": "Copy ID",
+    "Update": "Update",
+    "Delete": "Delete",
+    "Action": "Action",
+    "categoryDeleteErorr": "Category Delete Erorr",
+    "CategoryDeleted": "Category deleted",
+    "Copy": "copied"
   }
 }

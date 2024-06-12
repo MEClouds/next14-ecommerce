@@ -11,7 +11,7 @@ export type CategoriesColumns = {
   id: string;
   name: string;
   createdAt: string;
-  billboardId: string;
+  billboardLabel: string;
 };
 
 export const CategoriesColumn = () => {
@@ -20,10 +20,15 @@ export const CategoriesColumn = () => {
   const columns: ColumnDef<CategoriesColumns>[] = [
     {
       accessorKey: "name",
-      header: t("label"),
+      header: t("Name"),
     },
     {
-      accessorKey: "billboardId",
+      accessorKey: "billboard",
+      header: t("Billboard"),
+      cell: ({ row }) => row.original.billboardLabel,
+    },
+    {
+      accessorKey: "createdAt",
       header: t("Date"),
     },
     {

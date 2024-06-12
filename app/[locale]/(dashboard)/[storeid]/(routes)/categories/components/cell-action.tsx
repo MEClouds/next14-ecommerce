@@ -35,22 +35,22 @@ export const CellAction = ({ data }: actionProps) => {
   const [open, setOpen] = useState(false);
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success(t("Index.Copy"));
+    toast.success(t("Copy"));
   };
 
   const OnEdit = () => {
-    router.push(`/${params.storeid}/Categories/${data.id}`);
+    router.push(`/${params.storeid}/categories/${data.id}`);
   };
 
   const onDelete = async () => {
     try {
       setLoading(true);
       await axios.delete(
-        `/api/${params.storeid}/Categories/${params.categoryid}`
+        `/api/${params.storeid}/categories/${params.categoryid}`
       );
       router.refresh();
-      router.push(`/${params.storeid}/Categories`);
-      toast.success(t("StoreDeleted"));
+      router.push(`/${params.storeid}/categories`);
+      toast.success(t("CategoryDeleted"));
     } catch (error) {
       toast.error(t("categoryDeleteErorr"));
     } finally {
@@ -75,19 +75,19 @@ export const CellAction = ({ data }: actionProps) => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuLabel>Action</DropdownMenuLabel>
+          <DropdownMenuLabel>{t("Action")}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => onCopy(data.id)}>
             <Copy className="me-2 h-4 w-4" />
-            Copy ID
+            {t("CopyID")}
           </DropdownMenuItem>
           <DropdownMenuItem onClick={OnEdit}>
             <Edit className="me-2 h-4 w-4" />
-            Update
+            {t("Update")}
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onClick={() => setOpen(true)}>
             <Trash className="me-2 h-4 w-4" />
-            Delete
+            {t("Delete")}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

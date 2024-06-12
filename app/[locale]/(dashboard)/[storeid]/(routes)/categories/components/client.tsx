@@ -27,14 +27,14 @@ export const CategoriesClient = ({ data }: CategoriesData) => {
           description={t("CategoriesDesc")}
         />
         <Button
-          onClick={() => router.push(`/${params.storeid}/Categories/new`)}
+          onClick={() => router.push(`/${params.storeid}/categories/new`)}
         >
           <Plus className="me-2 h-4 w-4" />
           {t("AddNew")}
         </Button>
       </div>
       <Separator />
-      <DataTable searchKey="label" columns={columns} data={data} />
+      <DataTable searchKey="name" columns={columns} data={data} />
       <Heading title={t("API")} description={t("APIDescription")} />
       <Separator />
       <ApiList entityId="categoryid" entityName="Categories" />

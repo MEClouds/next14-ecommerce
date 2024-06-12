@@ -14,10 +14,18 @@ import {
 import { Heading } from "@/components/ui/heading";
 import ImageUpload from "@/components/ui/image-upload";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectItem,
+  SelectValue,
+  SelectContent,
+  SelectTrigger,
+} from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { useOrigin } from "@/hooks/use-origin";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Category } from "@prisma/client";
+import { Billboard, Category } from "@prisma/client";
+
 import axios from "axios";
 import { Trash } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -28,10 +36,12 @@ import toast from "react-hot-toast";
 import * as z from "zod";
 interface categoryFormProps {
   initialData: Category | null;
+  billboards: Billboard[];
 }
 
 export const CategoryForm: React.FC<categoryFormProps> = ({
-  initialData: initialData,
+  initialData,
+  billboards,
 }) => {
   const t = useTranslations("Index");
   const [open, setOpen] = useState(false);
@@ -40,8 +50,8 @@ export const CategoryForm: React.FC<categoryFormProps> = ({
   const router = useRouter();
   const origin = useOrigin();
   const formSchema = z.object({
-    label: z.string().min(1, t("StoreNameError")),
-    imageUrl: z.string().min(1, t("StoreNameError")),
+    name: z.string().min(1, t("StoreNameError")),
+    billboardId: z.string().min(1, t("StoreNameError")),
   });
 
   const title = initialData ? t("Editcategory") : t("Categories");
@@ -58,8 +68,8 @@ export const CategoryForm: React.FC<categoryFormProps> = ({
   const form = useForm<categoryFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: initialData || {
-      label: "",
-      imageUrl: "",
+      name: "",
+      billboardId: "",
     },
   });
 
@@ -69,16 +79,16 @@ export const CategoryForm: React.FC<categoryFormProps> = ({
       setLoading(true);
       if (initialData) {
         await axios.patch(
-          `/api/${params.storeid}/Categories/${params.categoryid}`,
+          `/api/${params.storeid}/categories/${params.categoryid}`,
           data
         );
       } else {
-        await axios.post(`/api/${params.storeid}/Categories`, data);
+        await axios.post(`/api/${params.storeid}/categories`, data);
       }
 
       router.refresh();
       toast.success(t(toastMessage));
-      router.push(`/${params.storeid}/Categories`);
+      router.push(`/${params.storeid}/categories`);
     } catch (error) {
       toast.error(t("SomethingWrong"));
     } finally {
@@ -90,10 +100,10 @@ export const CategoryForm: React.FC<categoryFormProps> = ({
     try {
       setLoading(true);
       await axios.delete(
-        `/api/${params.storeid}/Categories/${params.categoryid}`
+        `/api/${params.storeid}/categories/${params.categoryid}`
       );
       router.refresh();
-      router.push("/");
+      router.push(`/${params.storeid}/categories`);
       toast.success(t("StoreDeleted"));
     } catch (error) {
       toast.error(t("categoryDeleteErorr"));
@@ -132,38 +142,54 @@ export const CategoryForm: React.FC<categoryFormProps> = ({
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-7 w-full"
         >
-          <FormField
-            control={form.control}
-            name="imageUrl"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t("BackgroundImage")}</FormLabel>
-                <FormControl>
-                  <ImageUpload
-                    disable={loading}
-                    value={field.value ? [field.value] : []}
-                    onChange={(url) => field.onChange(url)}
-                    onRemove={() => field.onChange("")}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className="grid grid-cols-3 gap7">
+          <div className="grid grid-cols-3 gap-2">
             <FormField
               control={form.control}
-              name="label"
+              name="name"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t("Name")}</FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder={t("categoryLabel")}
+                      placeholder={t("CategoryName")}
                       {...field}
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="billboardId"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t("Billboard")}</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    value={field.value}
+                    defaultValue={field.value}
+                    disabled={loading}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue
+                          defaultValue={field.value}
+                          placeholder={t("SelectBillboards")}
+                        />
+                      </SelectTrigger>
+                    </FormControl>
+
+                    <SelectContent>
+                      {billboards.map((billboard) => (
+                        <SelectItem key={billboard.id} value={billboard.id}>
+                          {billboard.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+
                   <FormMessage />
                 </FormItem>
               )}

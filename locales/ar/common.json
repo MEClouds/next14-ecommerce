@@ -59,6 +59,18 @@
     "EditcategoryDesc": "تحرير وصف الفئة",
     "AddCategoriesDesc": "إضافة وصف الفئة",
     "categoryUpdated": "تم تحديث الفئة",
-    "categoryCreated": "تم إنشاء الفئة"
+    "categoryCreated": "تم إنشاء الفئة",
+    "Billboard": "لوحة",
+    "SelectBillboards": "حدد لوحة إعلانية",
+    "CategoryName": "اسم التصنيف",
+    "CategoriesDesc": "إدارة الفئات لمتجرك"
+  },
+  "index": {
+    "CopyID": "نسخ معرف",
+    "Update": "تحديث",
+    "Delete": "يمسح",
+    "Action": "فعل",
+    "CategoryDeleted": "تم حذف الفئة",
+    "Copy": "نسخ"
   }
 }
