@@ -51,6 +51,30 @@
     "Previous": "Previous",
     "Next": "Next",
     "API": "API",
-    "APIDescription": "API calls for billboards"
+    "APIDescription": "API calls for billboards",
+    "category": "category",
+    "categories": "categories",
+    "Editcategory": "Edit Category",
+    "Categories": "categories",
+    "EditcategoryDesc": "Edit category description",
+    "AddCategoriesDesc": "add category description",
+    "categoryUpdated": "category updated",
+    "categoryCreated": "category created",
+    "Billboard": "Billboard",
+    "SelectBillboards": "Select a billboard",
+    "CategoryName": "Category name",
+    "CategoriesDesc": "Mange categories for your store",
+    "Sizes": "Sizes"
+  },
+  "index": {
+    "CopyID": "Copy ID",
+    "Update": "Update",
+    "Delete": "Delete",
+    "Action": "Action",
+    "categoryDeleteErorr": "Category Delete Erorr",
+    "CategoryDeleted": "Category deleted",
+    "Copy": "copied",
+    "BillboardDeleted": "Billboard deleted",
+    "BillboardDeleteErorr": "Billboard Delete Erorr"
   }
 }

@@ -51,6 +51,29 @@
     "Previous": "سابق",
     "Next": "التالي",
     "API": "واجهة برمجة التطبيقات",
-    "APIDescription": " استدعائات واجهة برمجة التطبيقات (API) لللوحات الإعلانية"
+    "APIDescription": " استدعائات واجهة برمجة التطبيقات (API) لللوحات الإعلانية",
+    "category": "فئة",
+    "categories": "المجموعات",
+    "Editcategory": "تحرير الفئة",
+    "Categories": "فئات",
+    "EditcategoryDesc": "تحرير وصف الفئة",
+    "AddCategoriesDesc": "إضافة وصف الفئة",
+    "categoryUpdated": "تم تحديث الفئة",
+    "categoryCreated": "تم إنشاء الفئة",
+    "Billboard": "لوحة",
+    "SelectBillboards": "حدد لوحة إعلانية",
+    "CategoryName": "اسم التصنيف",
+    "CategoriesDesc": "إدارة الفئات لمتجرك",
+    "Sizes": "الأحجام"
+  },
+  "index": {
+    "CopyID": "نسخ معرف",
+    "Update": "تحديث",
+    "Delete": "يمسح",
+    "Action": "فعل",
+    "CategoryDeleted": "تم حذف الفئة",
+    "Copy": "نسخ",
+    "BillboardDeleted": "تم حذف اللوحة",
+    "BillboardDeleteErorr": "خطأ في حذف لوحة الإعلانات"
   }
 }

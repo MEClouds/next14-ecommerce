@@ -1,4 +1,4 @@
-import { BillboardsColumns } from "./columns";
+import { CategoriesColumns } from "./columns";
 import { Button } from "@/components/ui/button";
 import {
   Copy,
@@ -25,7 +25,7 @@ import { useState } from "react";
 import axios from "axios";
 
 interface actionProps {
-  data: BillboardsColumns;
+  data: CategoriesColumns;
 }
 export const CellAction = ({ data }: actionProps) => {
   const t = useTranslations("index");
@@ -35,24 +35,22 @@ export const CellAction = ({ data }: actionProps) => {
   const [open, setOpen] = useState(false);
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success(t("Index.Copy"));
+    toast.success(t("Copy"));
   };
 
   const OnEdit = () => {
-    router.push(`/${params.storeid}/billboards/${data.id}`);
+    router.push(`/${params.storeid}/categories/${data.id}`);
   };
 
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(
-        `/api/${params.storeid}/billboards/${params.billboardid}`
-      );
+      await axios.delete(`/api/${params.storeid}/categories/${data.id}`);
       router.refresh();
-      router.push(`/${params.storeid}/billboards`);
-      toast.success(t("BillboardDeleted"));
+      router.push(`/${params.storeid}/categories`);
+      toast.success(t("CategoryDeleted"));
     } catch (error) {
-      toast.error(t("BillboardDeleteErorr"));
+      toast.error(t("categoryDeleteErorr"));
     } finally {
       setLoading(false);
     }
