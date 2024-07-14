@@ -63,7 +63,8 @@
     "Billboard": "لوحة",
     "SelectBillboards": "حدد لوحة إعلانية",
     "CategoryName": "اسم التصنيف",
-    "CategoriesDesc": "إدارة الفئات لمتجرك"
+    "CategoriesDesc": "إدارة الفئات لمتجرك",
+    "Sizes": "الأحجام"
   },
   "index": {
     "CopyID": "نسخ معرف",
@@ -71,6 +72,8 @@
     "Delete": "يمسح",
     "Action": "فعل",
     "CategoryDeleted": "تم حذف الفئة",
-    "Copy": "نسخ"
+    "Copy": "نسخ",
+    "BillboardDeleted": "تم حذف اللوحة",
+    "BillboardDeleteErorr": "خطأ في حذف لوحة الإعلانات"
   }
 }

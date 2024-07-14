@@ -63,7 +63,8 @@
     "Billboard": "Billboard",
     "SelectBillboards": "Select a billboard",
     "CategoryName": "Category name",
-    "CategoriesDesc": "Mange categories for your store"
+    "CategoriesDesc": "Mange categories for your store",
+    "Sizes": "Sizes"
   },
   "index": {
     "CopyID": "Copy ID",
@@ -72,6 +73,8 @@
     "Action": "Action",
     "categoryDeleteErorr": "Category Delete Erorr",
     "CategoryDeleted": "Category deleted",
-    "Copy": "copied"
+    "Copy": "copied",
+    "BillboardDeleted": "Billboard deleted",
+    "BillboardDeleteErorr": "Billboard Delete Erorr"
   }
 }

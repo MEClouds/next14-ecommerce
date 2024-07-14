@@ -50,7 +50,7 @@ export const CellAction = ({ data }: actionProps) => {
       );
       router.refresh();
       router.push(`/${params.storeid}/billboards`);
-      toast.success(t("StoreDeleted"));
+      toast.success(t("BillboardDeleted"));
     } catch (error) {
       toast.error(t("BillboardDeleteErorr"));
     } finally {
@@ -75,19 +75,19 @@ export const CellAction = ({ data }: actionProps) => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuLabel>Action</DropdownMenuLabel>
+          <DropdownMenuLabel>{t("Action")}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => onCopy(data.id)}>
             <Copy className="me-2 h-4 w-4" />
-            Copy ID
+            {t("CopyID")}
           </DropdownMenuItem>
           <DropdownMenuItem onClick={OnEdit}>
             <Edit className="me-2 h-4 w-4" />
-            Update
+            {t("Update")}
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onClick={() => setOpen(true)}>
             <Trash className="me-2 h-4 w-4" />
-            Delete
+            {t("Delete")}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

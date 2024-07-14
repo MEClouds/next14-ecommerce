@@ -37,7 +37,7 @@ export const CategoriesClient = ({ data }: CategoriesData) => {
       <DataTable searchKey="name" columns={columns} data={data} />
       <Heading title={t("API")} description={t("APIDescription")} />
       <Separator />
-      <ApiList entityId="categoryid" entityName="Categories" />
+      <ApiList entityId="categoryid" entityName="categories" />
     </>
   );
 };
