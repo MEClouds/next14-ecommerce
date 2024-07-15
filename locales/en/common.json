@@ -64,7 +64,21 @@
     "SelectBillboards": "Select a billboard",
     "CategoryName": "Category name",
     "CategoriesDesc": "Mange categories for your store",
-    "Sizes": "Sizes"
+    "Sizes": "Sizes",
+    "value": "value",
+    "name": "name",
+    "SizesDesc": "Mange sizes for your store",
+    "APISizesDescription": "API calls for sizes",
+    "EditSize": "Edit size",
+    "Size": "Size",
+    "EditSizeDesc": "Edit a size",
+    "AddNewSizeDesc": "Add new size",
+    "SizeUpdated": "Size updated",
+    "SizeCreated": "size created",
+    "SizeLabel": "Size name",
+    "SizeValue": "Size value",
+    "Value": "Value",
+    "SizeDeleteErorr": "Make sure you remove all products used this size"
   },
   "index": {
     "CopyID": "Copy ID",
@@ -75,6 +89,8 @@
     "CategoryDeleted": "Category deleted",
     "Copy": "copied",
     "BillboardDeleted": "Billboard deleted",
-    "BillboardDeleteErorr": "Billboard Delete Erorr"
+    "BillboardDeleteErorr": "Billboard Delete Erorr",
+    "SizesDeleted": "Size deleted",
+    "SizeDeleteErorr": "Size Delete Erorr"
   }
 }

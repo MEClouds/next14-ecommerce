@@ -64,7 +64,20 @@
     "SelectBillboards": "حدد لوحة إعلانية",
     "CategoryName": "اسم التصنيف",
     "CategoriesDesc": "إدارة الفئات لمتجرك",
-    "Sizes": "الأحجام"
+    "Sizes": "الأحجام",
+    "value": "قيمة",
+    "name": "اسم",
+    "SizesDesc": "إدارة الأحجام لمتجرك",
+    "APISizesDescription": "تستدعي واجهة برمجة التطبيقات (API) للأحجام",
+    "EditSize": "تحرير الحجم",
+    "Size": "مقاس",
+    "AddNewSizeDesc": "إضافة حجم جديد",
+    "SizeUpdated": "تم تحديث الحجم",
+    "SizeCreated": "الحجم الذي تم إنشاؤه",
+    "SizeLabel": "اسم الحجم",
+    "SizeValue": "قيمة الحجم",
+    "Value": "قيمة",
+    "SizeDeleteErorr": "تأكد من إزالة جميع المنتجات المستخدمة بهذا الحجم"
   },
   "index": {
     "CopyID": "نسخ معرف",
@@ -74,6 +87,8 @@
     "CategoryDeleted": "تم حذف الفئة",
     "Copy": "نسخ",
     "BillboardDeleted": "تم حذف اللوحة",
-    "BillboardDeleteErorr": "خطأ في حذف لوحة الإعلانات"
+    "BillboardDeleteErorr": "خطأ في حذف لوحة الإعلانات",
+    "SizesDeleted": "تم حذف الحجم",
+    "SizeDeleteErorr": "خطأ في حذف الحجم"
   }
 }
