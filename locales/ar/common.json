@@ -77,7 +77,19 @@
     "SizeLabel": "اسم الحجم",
     "SizeValue": "قيمة الحجم",
     "Value": "قيمة",
-    "SizeDeleteErorr": "تأكد من إزالة جميع المنتجات المستخدمة بهذا الحجم"
+    "SizeDeleteErorr": "تأكد من إزالة جميع المنتجات المستخدمة بهذا الحجم",
+    "Colors": "الألوان",
+    "ColorsDesc": "إدارة الألوان لمتجرك",
+    "APIColorsDescription": "تستدعي واجهة برمجة التطبيقات (API) الألوان",
+    "Color": "لون",
+    "EditColor": "تحرير اللون",
+    "EditColorDesc": "تحرير اللون",
+    "ColorCreated": "تم إنشاء اللون",
+    "ColorLabel": "اسم اللون",
+    "ColorValueError": "يجب أن يكون اللون بتنسيق رمز سداسي عشري",
+    "ColorUpdated": "تم تحديث اللون",
+    "ColorValue": "#0000",
+    "AddNewColorDesc": "أضف لونًا جديدًا"
   },
   "index": {
     "CopyID": "نسخ معرف",
@@ -89,6 +101,7 @@
     "BillboardDeleted": "تم حذف اللوحة",
     "BillboardDeleteErorr": "خطأ في حذف لوحة الإعلانات",
     "SizesDeleted": "تم حذف الحجم",
-    "SizeDeleteErorr": "خطأ في حذف الحجم"
+    "SizeDeleteErorr": "خطأ في حذف الحجم",
+    "ColorDeleted": "تم حذف اللون"
   }
 }
