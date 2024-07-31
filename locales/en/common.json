@@ -78,7 +78,20 @@
     "SizeLabel": "Size name",
     "SizeValue": "Size value",
     "Value": "Value",
-    "SizeDeleteErorr": "Make sure you remove all products used this size"
+    "SizeDeleteErorr": "Make sure you remove all products used this size",
+    "Colors": "Colors",
+    "ColorsDesc": "Mange colors for your store",
+    "APIColorsDescription": "API calls for colors",
+    "EditColor": "Edit color",
+    "Color": "Color",
+    "EditColorDesc": "Edit a color",
+    "ColorCreated": "Color created",
+    "ColorDeleteErorr": "Make sure you remove all products used this color",
+    "ColorLabel": "Color name",
+    "ColorValue": "#0000",
+    "ColorValueError": "color must be in a hex code format",
+    "ColorUpdated": "color updated",
+    "AddNewColorDesc": "Add new color"
   },
   "index": {
     "CopyID": "Copy ID",
@@ -91,6 +104,8 @@
     "BillboardDeleted": "Billboard deleted",
     "BillboardDeleteErorr": "Billboard Delete Erorr",
     "SizesDeleted": "Size deleted",
-    "SizeDeleteErorr": "Size Delete Erorr"
+    "SizeDeleteErorr": "Size Delete Erorr",
+    "ColorDeleteErorr": "Color Delete Erorr",
+    "ColorDeleted": "Color deleted"
   }
 }
