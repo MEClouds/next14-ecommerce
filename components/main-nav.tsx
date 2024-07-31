@@ -48,6 +48,11 @@ export function MainNav({
       label: t("Products"),
       active: pathname === `/${params.storeid}/products`,
     },
+    {
+      href: `/${params.storeid}/orders`,
+      label: t("Orders"),
+      active: pathname === `/${params.storeid}/orders`,
+    },
   ]
   return (
     <nav className={cn("flex  items-center  gap-x-4 lg:gap-x-6", className)}>
