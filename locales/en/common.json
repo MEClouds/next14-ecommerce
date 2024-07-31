@@ -91,7 +91,27 @@
     "ColorValue": "#0000",
     "ColorValueError": "color must be in a hex code format",
     "ColorUpdated": "color updated",
-    "AddNewColorDesc": "Add new color"
+    "AddNewColorDesc": "Add new color",
+    "Products": "Products",
+    "Price": "Price",
+    "isFeatured": "Featured",
+    "isArchived": "Archived",
+    "productsDesc": "Mange products for your store",
+    "products": "Products",
+    "productsAPIDescription": "API  calls for products",
+    "ProductDeleteErorr": "Something went wrong",
+    "EditProduct": "Edit Product",
+    "EditProductDesc": "Edit a product",
+    "ProductUpdated": "Product updated",
+    "ProductCreated": "Product created",
+    "AddProductsDesc": "Add a product",
+    "ProductLabel": "Product name",
+    "SelectCategory": "Select a category",
+    "SelectSzie": "Select a size",
+    "SelectColor": "Select a color",
+    "isFeaturedDesc": "This Product will appear on the home page ",
+    "isArchivedDesc": "this product will not apear anywhere in the store.",
+    "PricePlaceholder": "99.9"
   },
   "index": {
     "CopyID": "Copy ID",
@@ -106,6 +126,8 @@
     "SizesDeleted": "Size deleted",
     "SizeDeleteErorr": "Size Delete Erorr",
     "ColorDeleteErorr": "Color Delete Erorr",
-    "ColorDeleted": "Color deleted"
+    "ColorDeleted": "Color deleted",
+    "ProductDeleted": "Product deleted",
+    "ProductDeleteErorr": "Product delete erorr"
   }
 }
