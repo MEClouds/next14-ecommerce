@@ -111,7 +111,13 @@
     "SelectColor": "Select a color",
     "isFeaturedDesc": "This Product will appear on the home page ",
     "isArchivedDesc": "this product will not apear anywhere in the store.",
-    "PricePlaceholder": "99.9"
+    "PricePlaceholder": "99.9",
+    "Orders": "Orders",
+    "Phone": "Phone",
+    "Address": "Address",
+    "totalPrice": "Total price",
+    "isPaid": "Paid",
+    "OrdersDesc": "Mange Orders for your store"
   },
   "index": {
     "CopyID": "Copy ID",

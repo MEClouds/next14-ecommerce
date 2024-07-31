@@ -105,7 +105,13 @@
     "isFeatured": "متميز",
     "isArchived": "مؤرشف",
     "PricePlaceholder": "99.9",
-    "Price": "سعر"
+    "Price": "سعر",
+    "Orders": "طلبات",
+    "Phone": "هاتف",
+    "Address": "عنوان",
+    "totalPrice": "السعر الكلي",
+    "isPaid": "مدفوع",
+    "OrdersDesc": "إدارة الطلبات لمتجرك"
   },
   "index": {
     "CopyID": "نسخ معرف",
