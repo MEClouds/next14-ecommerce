@@ -117,7 +117,11 @@
     "TotalRevenue": "إجمالي الإيرادات",
     "Sales": "مبيعات",
     "InStock": "المنتجات في المخزون",
-    "overview": "نظرة عامة"
+    "overview": "نظرة عامة",
+    "ToggleTheme": "تبديل الموضوع",
+    "Light": "ضوء",
+    "Dark": "مظلم",
+    "System": "نظام"
   },
   "index": {
     "CopyID": "نسخ معرف",

@@ -123,7 +123,11 @@
     "TotalRevenue": "Total Revenue",
     "Sales": "Sales",
     "InStock": "Products In stock",
-    "overview": "Overview"
+    "overview": "Overview",
+    "ToggleTheme": "Toggle Theme",
+    "Light": "Light",
+    "Dark": "Dark",
+    "System": "System"
   },
   "index": {
     "CopyID": "Copy ID",
