@@ -111,7 +111,13 @@
     "Address": "عنوان",
     "totalPrice": "السعر الكلي",
     "isPaid": "مدفوع",
-    "OrdersDesc": "إدارة الطلبات لمتجرك"
+    "OrdersDesc": "إدارة الطلبات لمتجرك",
+    "Dashboard": "لوحة القيادة",
+    "DashboardDisc": "نظرة عامة على متجرك",
+    "TotalRevenue": "إجمالي الإيرادات",
+    "Sales": "مبيعات",
+    "InStock": "المنتجات في المخزون",
+    "overview": "نظرة عامة"
   },
   "index": {
     "CopyID": "نسخ معرف",
@@ -125,5 +131,9 @@
     "SizesDeleted": "تم حذف الحجم",
     "SizeDeleteErorr": "خطأ في حذف الحجم",
     "ColorDeleted": "تم حذف اللون"
-  }
+  },
+  "Dashboard": "لوحة التحكم",
+  "Sales": "مبيعات",
+  "InStock": "المنتجات المتوفرة",
+  "Overview": "ملخص"
 }
