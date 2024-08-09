@@ -117,7 +117,17 @@
     "Address": "Address",
     "totalPrice": "Total price",
     "isPaid": "Paid",
-    "OrdersDesc": "Mange Orders for your store"
+    "OrdersDesc": "Mange Orders for your store",
+    "Dashboard": "Dashboard",
+    "DashboardDisc": "Overview of your store",
+    "TotalRevenue": "Total Revenue",
+    "Sales": "Sales",
+    "InStock": "Products In stock",
+    "overview": "Overview",
+    "ToggleTheme": "Toggle Theme",
+    "Light": "Light",
+    "Dark": "Dark",
+    "System": "System"
   },
   "index": {
     "CopyID": "Copy ID",
@@ -135,5 +145,11 @@
     "ColorDeleted": "Color deleted",
     "ProductDeleted": "Product deleted",
     "ProductDeleteErorr": "Product delete erorr"
-  }
+  },
+  "Dashboard": "Dashboard",
+  "DashboardDisc": "Overview of your store",
+  "TotalRevenue": "Total Revenue",
+  "Sales": "Sales",
+  "InStock": "Products In Stock",
+  "Overview": "Overview"
 }
