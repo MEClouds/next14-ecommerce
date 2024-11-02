@@ -127,7 +127,8 @@
     "ToggleTheme": "Toggle Theme",
     "Light": "Light",
     "Dark": "Dark",
-    "System": "System"
+    "System": "System",
+    "Storefront": "Storefront"
   },
   "index": {
     "CopyID": "Copy ID",

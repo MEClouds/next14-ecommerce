@@ -121,7 +121,8 @@
     "ToggleTheme": "تبديل الموضوع",
     "Light": "ضوء",
     "Dark": "مظلم",
-    "System": "نظام"
+    "System": "نظام",
+    "Storefront": "واجهة المتجر"
   },
   "index": {
     "CopyID": "نسخ معرف",
